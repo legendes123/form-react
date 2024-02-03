@@ -27,14 +27,11 @@ export function useForm(data:DataForm) {
     function selectUniversity(value:string){
         setUniversity(prevState => ({...prevState,selectedValue:value} as stateSelect))
         setHousing({option:data[country?.selectedValue!]?.housing,selectedValue:''})
-        console.log({option:data[country?.selectedValue!]?.housing,selectedValue:''})
-
     }
     function selectHousing(value:string){
         setHousing(prevState => ({...prevState,selectedValue:value} as stateSelect))
     }
     function isCompletelyFrom(){
-        console.log(housing)
         return !(country?.selectedValue && housing?.selectedValue && university?.selectedValue && city?.selectedValue)
     }
 
